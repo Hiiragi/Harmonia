@@ -1,0 +1,863 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		770CF9BD20E3805F007D314D /* AbstractEffectCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579220D6A07E00818C01 /* AbstractEffectCommand.cpp */; };
+		770CF9BE20E38061007D314D /* AbstractSoundData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579820D6A07F00818C01 /* AbstractSoundData.cpp */; };
+		770CF9BF20E38062007D314D /* DuckerCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579E20D6A07F00818C01 /* DuckerCommand.cpp */; };
+		770CF9C020E38064007D314D /* Harmonia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A02657A220D6A07F00818C01 /* Harmonia.cpp */; };
+		770CF9C120E38065007D314D /* HarmoniaErrorData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579420D6A07E00818C01 /* HarmoniaErrorData.cpp */; };
+		770CF9C220E38067007D314D /* HarmoniaInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A02657A020D6A07F00818C01 /* HarmoniaInterface.cpp */; };
+		770CF9C320E38068007D314D /* PlayingData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579D20D6A07F00818C01 /* PlayingData.cpp */; };
+		770CF9C420E3806A007D314D /* RegisteredSoundData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579320D6A07E00818C01 /* RegisteredSoundData.cpp */; };
+		770CF9C520E3806B007D314D /* SoundEventData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579A20D6A07F00818C01 /* SoundEventData.cpp */; };
+		770CF9C620E3806D007D314D /* SoundGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A02657A120D6A07F00818C01 /* SoundGroup.cpp */; };
+		A00086231FC5B8FD009D0C2E /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A00086201FC5B8FC009D0C2E /* libogg.a */; };
+		A00086241FC5B8FD009D0C2E /* libvorbisfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A00086211FC5B8FC009D0C2E /* libvorbisfile.a */; };
+		A00086251FC5B8FD009D0C2E /* libvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A00086221FC5B8FC009D0C2E /* libvorbis.a */; };
+		A00086261FC5B9A6009D0C2E /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A00086201FC5B8FC009D0C2E /* libogg.a */; };
+		A00086271FC5B9A8009D0C2E /* libvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A00086221FC5B8FC009D0C2E /* libvorbis.a */; };
+		A00086281FC5B9AA009D0C2E /* libvorbisfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A00086211FC5B8FC009D0C2E /* libvorbisfile.a */; };
+		A000862C1FC5CD80009D0C2E /* test.ogg in Resources */ = {isa = PBXBuildFile; fileRef = A000862B1FC5CD80009D0C2E /* test.ogg */; };
+		A02657A520D6A07F00818C01 /* AbstractEffectCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579220D6A07E00818C01 /* AbstractEffectCommand.cpp */; };
+		A02657A620D6A07F00818C01 /* RegisteredSoundData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579320D6A07E00818C01 /* RegisteredSoundData.cpp */; };
+		A02657A720D6A07F00818C01 /* HarmoniaErrorData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579420D6A07E00818C01 /* HarmoniaErrorData.cpp */; };
+		A02657A820D6A07F00818C01 /* AbstractSoundData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579820D6A07F00818C01 /* AbstractSoundData.cpp */; };
+		A02657A920D6A07F00818C01 /* SoundEventData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579A20D6A07F00818C01 /* SoundEventData.cpp */; };
+		A02657AA20D6A07F00818C01 /* PlayingData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579D20D6A07F00818C01 /* PlayingData.cpp */; };
+		A02657AB20D6A07F00818C01 /* DuckerCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A026579E20D6A07F00818C01 /* DuckerCommand.cpp */; };
+		A02657AC20D6A07F00818C01 /* HarmoniaInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A02657A020D6A07F00818C01 /* HarmoniaInterface.cpp */; };
+		A02657AD20D6A07F00818C01 /* SoundGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A02657A120D6A07F00818C01 /* SoundGroup.cpp */; };
+		A02657AE20D6A07F00818C01 /* Harmonia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A02657A220D6A07F00818C01 /* Harmonia.cpp */; };
+		A053EA9A1FC542FA0066FC61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A053EA981FC5392D0066FC61 /* AVFoundation.framework */; };
+		A053EA9B1FC542FE0066FC61 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06714561FC4836200BAA210 /* AudioUnit.framework */; };
+		A053EA9C1FC543030066FC61 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06714551FC4833F00BAA210 /* AudioToolbox.framework */; };
+		A053EAA51FC543570066FC61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A053EAA41FC543570066FC61 /* AppDelegate.m */; };
+		A053EAA81FC543570066FC61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A053EAA71FC543570066FC61 /* ViewController.m */; };
+		A053EAAA1FC543570066FC61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A053EAA91FC543570066FC61 /* Assets.xcassets */; };
+		A053EAAD1FC543570066FC61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A053EAAB1FC543570066FC61 /* Main.storyboard */; };
+		A053EAB01FC543570066FC61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A053EAAF1FC543570066FC61 /* main.m */; };
+		A053EABB1FC543570066FC61 /* Harmonia_TestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A053EABA1FC543570066FC61 /* Harmonia_TestAppTests.m */; };
+		A053EAC61FC543570066FC61 /* Harmonia_TestAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A053EAC51FC543570066FC61 /* Harmonia_TestAppUITests.m */; };
+		A053EADD1FC547170066FC61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A053EA981FC5392D0066FC61 /* AVFoundation.framework */; };
+		A053EAE01FC547170066FC61 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06714561FC4836200BAA210 /* AudioUnit.framework */; };
+		A053EAE11FC547170066FC61 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06714551FC4833F00BAA210 /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		770CF9B920DC8F3F007D314D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A067142F1FC4802B00BAA210 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A06714361FC4802B00BAA210;
+			remoteInfo = Harmonia;
+		};
+		A053EAB71FC543570066FC61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A067142F1FC4802B00BAA210 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A053EAA01FC543560066FC61;
+			remoteInfo = Harmonia_TestApp;
+		};
+		A053EAC21FC543570066FC61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A067142F1FC4802B00BAA210 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A053EAA01FC543560066FC61;
+			remoteInfo = Harmonia_TestApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		770CF9BB20DC8F3F007D314D /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A053EAE41FC549EB0066FC61 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A053EAFF1FC561980066FC61 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A00086201FC5B8FC009D0C2E /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libogg.a; path = ../../../libs/macosx/libogg.a; sourceTree = "<group>"; };
+		A00086211FC5B8FC009D0C2E /* libvorbisfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvorbisfile.a; path = ../../../libs/macosx/libvorbisfile.a; sourceTree = "<group>"; };
+		A00086221FC5B8FC009D0C2E /* libvorbis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvorbis.a; path = ../../../libs/macosx/libvorbis.a; sourceTree = "<group>"; };
+		A000862B1FC5CD80009D0C2E /* test.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.ogg; sourceTree = "<group>"; };
+		A026578E20D6A07E00818C01 /* AbstractEffectCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractEffectCommand.h; path = ../../../../src/c/AbstractEffectCommand.h; sourceTree = "<group>"; };
+		A026578F20D6A07E00818C01 /* SoundGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundGroup.h; path = ../../../../src/c/SoundGroup.h; sourceTree = "<group>"; };
+		A026579020D6A07E00818C01 /* DuckerCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DuckerCommand.h; path = ../../../../src/c/DuckerCommand.h; sourceTree = "<group>"; };
+		A026579120D6A07E00818C01 /* HarmoniaInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HarmoniaInterface.h; path = ../../../../src/c/HarmoniaInterface.h; sourceTree = "<group>"; };
+		A026579220D6A07E00818C01 /* AbstractEffectCommand.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = AbstractEffectCommand.cpp; path = ../../../../src/c/AbstractEffectCommand.cpp; sourceTree = "<group>"; };
+		A026579320D6A07E00818C01 /* RegisteredSoundData.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = RegisteredSoundData.cpp; path = ../../../../src/c/RegisteredSoundData.cpp; sourceTree = "<group>"; };
+		A026579420D6A07E00818C01 /* HarmoniaErrorData.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = HarmoniaErrorData.cpp; path = ../../../../src/c/HarmoniaErrorData.cpp; sourceTree = "<group>"; };
+		A026579520D6A07E00818C01 /* PlayingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingData.h; path = ../../../../src/c/PlayingData.h; sourceTree = "<group>"; };
+		A026579620D6A07E00818C01 /* AbstractSoundData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractSoundData.h; path = ../../../../src/c/AbstractSoundData.h; sourceTree = "<group>"; };
+		A026579720D6A07E00818C01 /* RegisteredSoundData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisteredSoundData.h; path = ../../../../src/c/RegisteredSoundData.h; sourceTree = "<group>"; };
+		A026579820D6A07F00818C01 /* AbstractSoundData.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = AbstractSoundData.cpp; path = ../../../../src/c/AbstractSoundData.cpp; sourceTree = "<group>"; };
+		A026579920D6A07F00818C01 /* HarmoniaErrorType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HarmoniaErrorType.h; path = ../../../../src/c/HarmoniaErrorType.h; sourceTree = "<group>"; };
+		A026579A20D6A07F00818C01 /* SoundEventData.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = SoundEventData.cpp; path = ../../../../src/c/SoundEventData.cpp; sourceTree = "<group>"; };
+		A026579B20D6A07F00818C01 /* SoundStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundStatus.h; path = ../../../../src/c/SoundStatus.h; sourceTree = "<group>"; };
+		A026579C20D6A07F00818C01 /* HarmoniaErrorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HarmoniaErrorData.h; path = ../../../../src/c/HarmoniaErrorData.h; sourceTree = "<group>"; };
+		A026579D20D6A07F00818C01 /* PlayingData.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = PlayingData.cpp; path = ../../../../src/c/PlayingData.cpp; sourceTree = "<group>"; };
+		A026579E20D6A07F00818C01 /* DuckerCommand.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = DuckerCommand.cpp; path = ../../../../src/c/DuckerCommand.cpp; sourceTree = "<group>"; };
+		A026579F20D6A07F00818C01 /* Harmonia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Harmonia.h; path = ../../../../src/c/Harmonia.h; sourceTree = "<group>"; };
+		A02657A020D6A07F00818C01 /* HarmoniaInterface.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = HarmoniaInterface.cpp; path = ../../../../src/c/HarmoniaInterface.cpp; sourceTree = "<group>"; };
+		A02657A120D6A07F00818C01 /* SoundGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = SoundGroup.cpp; path = ../../../../src/c/SoundGroup.cpp; sourceTree = "<group>"; };
+		A02657A220D6A07F00818C01 /* Harmonia.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Harmonia.cpp; path = ../../../../src/c/Harmonia.cpp; sourceTree = "<group>"; };
+		A02657A320D6A07F00818C01 /* SoundEventData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundEventData.h; path = ../../../../src/c/SoundEventData.h; sourceTree = "<group>"; };
+		A02657A420D6A07F00818C01 /* SoundEventType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundEventType.h; path = ../../../../src/c/SoundEventType.h; sourceTree = "<group>"; };
+		A053EA981FC5392D0066FC61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A053EAA11FC543560066FC61 /* Harmonia_TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Harmonia_TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A053EAA31FC543560066FC61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A053EAA41FC543570066FC61 /* AppDelegate.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = AppDelegate.m; sourceTree = "<group>"; };
+		A053EAA61FC543570066FC61 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A053EAA71FC543570066FC61 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A053EAA91FC543570066FC61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A053EAAC1FC543570066FC61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A053EAAE1FC543570066FC61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A053EAAF1FC543570066FC61 /* main.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = main.m; sourceTree = "<group>"; };
+		A053EAB11FC543570066FC61 /* Harmonia_TestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Harmonia_TestApp.entitlements; sourceTree = "<group>"; };
+		A053EAB61FC543570066FC61 /* Harmonia_TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Harmonia_TestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A053EABA1FC543570066FC61 /* Harmonia_TestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Harmonia_TestAppTests.m; sourceTree = "<group>"; };
+		A053EABC1FC543570066FC61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A053EAC11FC543570066FC61 /* Harmonia_TestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Harmonia_TestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A053EAC51FC543570066FC61 /* Harmonia_TestAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Harmonia_TestAppUITests.m; sourceTree = "<group>"; };
+		A053EAC71FC543570066FC61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A06714371FC4802B00BAA210 /* Harmonia.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Harmonia.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A067143A1FC4802B00BAA210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A06714551FC4833F00BAA210 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A06714561FC4836200BAA210 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A053EA9E1FC543560066FC61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00086261FC5B9A6009D0C2E /* libogg.a in Frameworks */,
+				A00086271FC5B9A8009D0C2E /* libvorbis.a in Frameworks */,
+				A00086281FC5B9AA009D0C2E /* libvorbisfile.a in Frameworks */,
+				A053EADD1FC547170066FC61 /* AVFoundation.framework in Frameworks */,
+				A053EAE01FC547170066FC61 /* AudioUnit.framework in Frameworks */,
+				A053EAE11FC547170066FC61 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A053EAB31FC543570066FC61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A053EABE1FC543570066FC61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A06714341FC4802B00BAA210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00086231FC5B8FD009D0C2E /* libogg.a in Frameworks */,
+				A00086241FC5B8FD009D0C2E /* libvorbisfile.a in Frameworks */,
+				A00086251FC5B8FD009D0C2E /* libvorbis.a in Frameworks */,
+				A053EA9A1FC542FA0066FC61 /* AVFoundation.framework in Frameworks */,
+				A053EA9B1FC542FE0066FC61 /* AudioUnit.framework in Frameworks */,
+				A053EA9C1FC543030066FC61 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A053EAA21FC543560066FC61 /* Harmonia_TestApp */ = {
+			isa = PBXGroup;
+			children = (
+				A000862B1FC5CD80009D0C2E /* test.ogg */,
+				A053EAA31FC543560066FC61 /* AppDelegate.h */,
+				A053EAA41FC543570066FC61 /* AppDelegate.m */,
+				A053EAA61FC543570066FC61 /* ViewController.h */,
+				A053EAA71FC543570066FC61 /* ViewController.m */,
+				A053EAA91FC543570066FC61 /* Assets.xcassets */,
+				A053EAAB1FC543570066FC61 /* Main.storyboard */,
+				A053EAAE1FC543570066FC61 /* Info.plist */,
+				A053EAAF1FC543570066FC61 /* main.m */,
+				A053EAB11FC543570066FC61 /* Harmonia_TestApp.entitlements */,
+			);
+			path = Harmonia_TestApp;
+			sourceTree = "<group>";
+		};
+		A053EAB91FC543570066FC61 /* Harmonia_TestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				A053EABA1FC543570066FC61 /* Harmonia_TestAppTests.m */,
+				A053EABC1FC543570066FC61 /* Info.plist */,
+			);
+			path = Harmonia_TestAppTests;
+			sourceTree = "<group>";
+		};
+		A053EAC41FC543570066FC61 /* Harmonia_TestAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A053EAC51FC543570066FC61 /* Harmonia_TestAppUITests.m */,
+				A053EAC71FC543570066FC61 /* Info.plist */,
+			);
+			path = Harmonia_TestAppUITests;
+			sourceTree = "<group>";
+		};
+		A067142E1FC4802B00BAA210 = {
+			isa = PBXGroup;
+			children = (
+				A06714391FC4802B00BAA210 /* Harmonia */,
+				A053EAA21FC543560066FC61 /* Harmonia_TestApp */,
+				A053EAB91FC543570066FC61 /* Harmonia_TestAppTests */,
+				A053EAC41FC543570066FC61 /* Harmonia_TestAppUITests */,
+				A06714381FC4802B00BAA210 /* Products */,
+				A067144C1FC481A000BAA210 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A06714381FC4802B00BAA210 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A06714371FC4802B00BAA210 /* Harmonia.bundle */,
+				A053EAA11FC543560066FC61 /* Harmonia_TestApp.app */,
+				A053EAB61FC543570066FC61 /* Harmonia_TestAppTests.xctest */,
+				A053EAC11FC543570066FC61 /* Harmonia_TestAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A06714391FC4802B00BAA210 /* Harmonia */ = {
+			isa = PBXGroup;
+			children = (
+				A026579220D6A07E00818C01 /* AbstractEffectCommand.cpp */,
+				A026578E20D6A07E00818C01 /* AbstractEffectCommand.h */,
+				A026579820D6A07F00818C01 /* AbstractSoundData.cpp */,
+				A026579620D6A07E00818C01 /* AbstractSoundData.h */,
+				A026579E20D6A07F00818C01 /* DuckerCommand.cpp */,
+				A026579020D6A07E00818C01 /* DuckerCommand.h */,
+				A02657A220D6A07F00818C01 /* Harmonia.cpp */,
+				A026579F20D6A07F00818C01 /* Harmonia.h */,
+				A026579420D6A07E00818C01 /* HarmoniaErrorData.cpp */,
+				A026579C20D6A07F00818C01 /* HarmoniaErrorData.h */,
+				A026579920D6A07F00818C01 /* HarmoniaErrorType.h */,
+				A02657A020D6A07F00818C01 /* HarmoniaInterface.cpp */,
+				A026579120D6A07E00818C01 /* HarmoniaInterface.h */,
+				A026579D20D6A07F00818C01 /* PlayingData.cpp */,
+				A026579520D6A07E00818C01 /* PlayingData.h */,
+				A026579320D6A07E00818C01 /* RegisteredSoundData.cpp */,
+				A026579720D6A07E00818C01 /* RegisteredSoundData.h */,
+				A026579A20D6A07F00818C01 /* SoundEventData.cpp */,
+				A02657A320D6A07F00818C01 /* SoundEventData.h */,
+				A02657A420D6A07F00818C01 /* SoundEventType.h */,
+				A02657A120D6A07F00818C01 /* SoundGroup.cpp */,
+				A026578F20D6A07E00818C01 /* SoundGroup.h */,
+				A026579B20D6A07F00818C01 /* SoundStatus.h */,
+				A067143A1FC4802B00BAA210 /* Info.plist */,
+			);
+			path = Harmonia;
+			sourceTree = "<group>";
+		};
+		A067144C1FC481A000BAA210 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A00086201FC5B8FC009D0C2E /* libogg.a */,
+				A00086221FC5B8FC009D0C2E /* libvorbis.a */,
+				A00086211FC5B8FC009D0C2E /* libvorbisfile.a */,
+				A053EA981FC5392D0066FC61 /* AVFoundation.framework */,
+				A06714561FC4836200BAA210 /* AudioUnit.framework */,
+				A06714551FC4833F00BAA210 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A053EAA01FC543560066FC61 /* Harmonia_TestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A053EAC81FC543570066FC61 /* Build configuration list for PBXNativeTarget "Harmonia_TestApp" */;
+			buildPhases = (
+				A053EA9D1FC543560066FC61 /* Sources */,
+				A053EA9E1FC543560066FC61 /* Frameworks */,
+				A053EA9F1FC543560066FC61 /* Resources */,
+				A053EAE41FC549EB0066FC61 /* CopyFiles */,
+				770CF9BB20DC8F3F007D314D /* Embed PlugIns */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				770CF9BA20DC8F3F007D314D /* PBXTargetDependency */,
+			);
+			name = Harmonia_TestApp;
+			productName = Harmonia_TestApp;
+			productReference = A053EAA11FC543560066FC61 /* Harmonia_TestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A053EAB51FC543570066FC61 /* Harmonia_TestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A053EACB1FC543570066FC61 /* Build configuration list for PBXNativeTarget "Harmonia_TestAppTests" */;
+			buildPhases = (
+				A053EAB21FC543570066FC61 /* Sources */,
+				A053EAB31FC543570066FC61 /* Frameworks */,
+				A053EAB41FC543570066FC61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A053EAB81FC543570066FC61 /* PBXTargetDependency */,
+			);
+			name = Harmonia_TestAppTests;
+			productName = Harmonia_TestAppTests;
+			productReference = A053EAB61FC543570066FC61 /* Harmonia_TestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A053EAC01FC543570066FC61 /* Harmonia_TestAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A053EACE1FC543570066FC61 /* Build configuration list for PBXNativeTarget "Harmonia_TestAppUITests" */;
+			buildPhases = (
+				A053EABD1FC543570066FC61 /* Sources */,
+				A053EABE1FC543570066FC61 /* Frameworks */,
+				A053EABF1FC543570066FC61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A053EAC31FC543570066FC61 /* PBXTargetDependency */,
+			);
+			name = Harmonia_TestAppUITests;
+			productName = Harmonia_TestAppUITests;
+			productReference = A053EAC11FC543570066FC61 /* Harmonia_TestAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		A06714361FC4802B00BAA210 /* Harmonia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A067143D1FC4802B00BAA210 /* Build configuration list for PBXNativeTarget "Harmonia" */;
+			buildPhases = (
+				A06714331FC4802B00BAA210 /* Sources */,
+				A06714341FC4802B00BAA210 /* Frameworks */,
+				A06714351FC4802B00BAA210 /* Resources */,
+				A053EAFF1FC561980066FC61 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Harmonia;
+			productName = Harmonia;
+			productReference = A06714371FC4802B00BAA210 /* Harmonia.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A067142F1FC4802B00BAA210 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Hiiragi;
+				TargetAttributes = {
+					A053EAA01FC543560066FC61 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					A053EAB51FC543570066FC61 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A053EAA01FC543560066FC61;
+					};
+					A053EAC01FC543570066FC61 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A053EAA01FC543560066FC61;
+					};
+					A06714361FC4802B00BAA210 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A06714321FC4802B00BAA210 /* Build configuration list for PBXProject "Harmonia" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A067142E1FC4802B00BAA210;
+			productRefGroup = A06714381FC4802B00BAA210 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A06714361FC4802B00BAA210 /* Harmonia */,
+				A053EAA01FC543560066FC61 /* Harmonia_TestApp */,
+				A053EAB51FC543570066FC61 /* Harmonia_TestAppTests */,
+				A053EAC01FC543570066FC61 /* Harmonia_TestAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A053EA9F1FC543560066FC61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A053EAAA1FC543570066FC61 /* Assets.xcassets in Resources */,
+				A053EAAD1FC543570066FC61 /* Main.storyboard in Resources */,
+				A000862C1FC5CD80009D0C2E /* test.ogg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A053EAB41FC543570066FC61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A053EABF1FC543570066FC61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A06714351FC4802B00BAA210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A053EA9D1FC543560066FC61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				770CF9C620E3806D007D314D /* SoundGroup.cpp in Sources */,
+				770CF9C520E3806B007D314D /* SoundEventData.cpp in Sources */,
+				770CF9C420E3806A007D314D /* RegisteredSoundData.cpp in Sources */,
+				770CF9C320E38068007D314D /* PlayingData.cpp in Sources */,
+				770CF9C120E38065007D314D /* HarmoniaErrorData.cpp in Sources */,
+				770CF9BE20E38061007D314D /* AbstractSoundData.cpp in Sources */,
+				770CF9C020E38064007D314D /* Harmonia.cpp in Sources */,
+				770CF9C220E38067007D314D /* HarmoniaInterface.cpp in Sources */,
+				770CF9BF20E38062007D314D /* DuckerCommand.cpp in Sources */,
+				770CF9BD20E3805F007D314D /* AbstractEffectCommand.cpp in Sources */,
+				A053EAA81FC543570066FC61 /* ViewController.m in Sources */,
+				A053EAB01FC543570066FC61 /* main.m in Sources */,
+				A053EAA51FC543570066FC61 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A053EAB21FC543570066FC61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A053EABB1FC543570066FC61 /* Harmonia_TestAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A053EABD1FC543570066FC61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A053EAC61FC543570066FC61 /* Harmonia_TestAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A06714331FC4802B00BAA210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02657AA20D6A07F00818C01 /* PlayingData.cpp in Sources */,
+				A02657A920D6A07F00818C01 /* SoundEventData.cpp in Sources */,
+				A02657AD20D6A07F00818C01 /* SoundGroup.cpp in Sources */,
+				A02657A720D6A07F00818C01 /* HarmoniaErrorData.cpp in Sources */,
+				A02657A820D6A07F00818C01 /* AbstractSoundData.cpp in Sources */,
+				A02657A520D6A07F00818C01 /* AbstractEffectCommand.cpp in Sources */,
+				A02657AB20D6A07F00818C01 /* DuckerCommand.cpp in Sources */,
+				A02657AC20D6A07F00818C01 /* HarmoniaInterface.cpp in Sources */,
+				A02657AE20D6A07F00818C01 /* Harmonia.cpp in Sources */,
+				A02657A620D6A07F00818C01 /* RegisteredSoundData.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		770CF9BA20DC8F3F007D314D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A06714361FC4802B00BAA210 /* Harmonia */;
+			targetProxy = 770CF9B920DC8F3F007D314D /* PBXContainerItemProxy */;
+		};
+		A053EAB81FC543570066FC61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A053EAA01FC543560066FC61 /* Harmonia_TestApp */;
+			targetProxy = A053EAB71FC543570066FC61 /* PBXContainerItemProxy */;
+		};
+		A053EAC31FC543570066FC61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A053EAA01FC543560066FC61 /* Harmonia_TestApp */;
+			targetProxy = A053EAC21FC543570066FC61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A053EAAB1FC543570066FC61 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A053EAAC1FC543570066FC61 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A053EAC91FC543570066FC61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Harmonia_TestApp/Harmonia_TestApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../../libs/src/libogg/include",
+					"$(PROJECT_DIR)/../../../libs/src/libvorbis/include",
+				);
+				INFOPLIST_FILE = Harmonia_TestApp/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @rpath";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../../libs/macosx";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.hiiragi.Harmonia-TestApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A053EACA1FC543570066FC61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Harmonia_TestApp/Harmonia_TestApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../../libs/src/libogg/include",
+					"$(PROJECT_DIR)/../../../libs/src/libvorbis/include",
+				);
+				INFOPLIST_FILE = Harmonia_TestApp/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @rpath";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../../libs/macosx";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.hiiragi.Harmonia-TestApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A053EACC1FC543570066FC61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Harmonia_TestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.hiiragi.Harmonia-TestAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Harmonia_TestApp.app/Contents/MacOS/Harmonia_TestApp";
+			};
+			name = Debug;
+		};
+		A053EACD1FC543570066FC61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Harmonia_TestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.hiiragi.Harmonia-TestAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Harmonia_TestApp.app/Contents/MacOS/Harmonia_TestApp";
+			};
+			name = Release;
+		};
+		A053EACF1FC543570066FC61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Harmonia_TestAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.hiiragi.Harmonia-TestAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Harmonia_TestApp;
+			};
+			name = Debug;
+		};
+		A053EAD01FC543570066FC61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Harmonia_TestAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.hiiragi.Harmonia-TestAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Harmonia_TestApp;
+			};
+			name = Release;
+		};
+		A067143B1FC4802B00BAA210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A067143C1FC4802B00BAA210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A067143E1FC4802B00BAA210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../../libs/src/libogg/include",
+					"$(PROJECT_DIR)/../../../libs/src/libvorbis/include",
+				);
+				INFOPLIST_FILE = Harmonia/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../../libs/macosx";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hiiragi.Harmonia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		A067143F1FC4802B00BAA210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../../libs/src/libogg/include",
+					"$(PROJECT_DIR)/../../../libs/src/libvorbis/include",
+				);
+				INFOPLIST_FILE = Harmonia/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../../libs/macosx";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hiiragi.Harmonia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A053EAC81FC543570066FC61 /* Build configuration list for PBXNativeTarget "Harmonia_TestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A053EAC91FC543570066FC61 /* Debug */,
+				A053EACA1FC543570066FC61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A053EACB1FC543570066FC61 /* Build configuration list for PBXNativeTarget "Harmonia_TestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A053EACC1FC543570066FC61 /* Debug */,
+				A053EACD1FC543570066FC61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A053EACE1FC543570066FC61 /* Build configuration list for PBXNativeTarget "Harmonia_TestAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A053EACF1FC543570066FC61 /* Debug */,
+				A053EAD01FC543570066FC61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A06714321FC4802B00BAA210 /* Build configuration list for PBXProject "Harmonia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A067143B1FC4802B00BAA210 /* Debug */,
+				A067143C1FC4802B00BAA210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A067143D1FC4802B00BAA210 /* Build configuration list for PBXNativeTarget "Harmonia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A067143E1FC4802B00BAA210 /* Debug */,
+				A067143F1FC4802B00BAA210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A067142F1FC4802B00BAA210 /* Project object */;
+}

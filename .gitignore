@@ -1,0 +1,9 @@
+platform/win/Harmonia/x64
+platform/win/Harmonia/.vs
+platform/win/Harmonia/Harmonia/x64
+platform/win/Harmonia/HarmoniaTestApp/x64
+platform/win/Harmonia/HarmoniaTestConsoleApp/x64
+platform/win/Harmonia/TestProject/x64
+unity_test/HarmoniaTest/.vs
+unity_test/HarmoniaTest/Library
+unity_test/HarmoniaTest/Temp

@@ -1,0 +1,48 @@
+﻿  analysis.c
+  bitrate.c
+  block.c
+..\..\..\lib\block.c(256): warning C4456: 'i' を宣言すると、以前のローカル宣言が隠蔽されます
+  ..\..\..\lib\block.c(172): note: 'i' の宣言を確認してください
+..\..\..\lib\block.c(1029): warning C4456: 'i' を宣言すると、以前のローカル宣言が隠蔽されます
+  ..\..\..\lib\block.c(972): note: 'i' の宣言を確認してください
+  codebook.c
+  envelope.c
+  floor0.c
+  floor1.c
+..\..\..\lib\floor1.c(497): warning C4457: 'a' を宣言すると、関数パラメーターが隠蔽されます
+  ..\..\..\lib\floor1.c(457): note: 'a' の宣言を確認してください
+..\..\..\lib\floor1.c(714): warning C4456: 'y0' を宣言すると、以前のローカル宣言が隠蔽されます
+  ..\..\..\lib\floor1.c(613): note: 'y0' の宣言を確認してください
+..\..\..\lib\floor1.c(715): warning C4456: 'y1' を宣言すると、以前のローカル宣言が隠蔽されます
+  ..\..\..\lib\floor1.c(614): note: 'y1' の宣言を確認してください
+  info.c
+..\..\..\lib\info.c : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+..\..\..\lib\info.c(62): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+..\..\..\lib\info.c(69): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+..\..\..\lib\info.c(70): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+..\..\..\lib\info.c(71): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+..\..\..\lib\info.c(93): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+..\..\..\lib\info.c(94): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+..\..\..\lib\info.c(112): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+..\..\..\lib\info.c(113): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  lookup.c
+  lpc.c
+  lsp.c
+  mapping0.c
+  mdct.c
+..\..\..\lib\mdct.c(79): warning C4456: 'i' を宣言すると、以前のローカル宣言が隠蔽されます
+  ..\..\..\lib\mdct.c(56): note: 'i' の宣言を確認してください
+..\..\..\lib\mdct.c(440): warning C4456: 'iX' を宣言すると、以前のローカル宣言が隠蔽されます
+  ..\..\..\lib\mdct.c(404): note: 'iX' の宣言を確認してください
+  psy.c
+..\..\..\lib\psy.c(239): warning C4456: 'bin' を宣言すると、以前のローカル宣言が隠蔽されます
+  ..\..\..\lib\psy.c(160): note: 'bin' の宣言を確認してください
+  registry.c
+  res0.c
+  sharedbook.c
+  smallft.c
+  synthesis.c
+  vorbisenc.c
+  コンパイル中...
+  window.c
+  libvorbis_static.vcxproj -> C:\Users\esaki-kiyokazu\Documents\harmonia\libs\src\libvorbis\win32\VS2010\x64\Release\libvorbis_static.lib

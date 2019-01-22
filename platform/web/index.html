@@ -1,0 +1,195 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../../src/js/Harmonia.js"></script>
+		<script type="text/javascript">
+			Harmonia.initialize(2048);
+			Harmonia.startCaptureErrors();
+
+		    var req = new XMLHttpRequest(); // HTTPでファイルを読み込むためのXMLHttpRrequestオブジェクトを生成
+		    req.open("GET", "test.ogg", true); // アクセスするファイルを指定
+		    req.responseType = "arraybuffer";
+		    req.send(null); // HTTPリクエストの発行
+			
+			var masterGroup;
+			var bgmGroup;
+			var seGroup;
+			var bgmPlayingData;
+
+		    req.onload = function() {
+				Harmonia.startCaptureEvents();
+
+				var bgmBinaryData = req.response;
+
+				req.open("GET", "se.ogg", true); // アクセスするファイルを指定
+				req.send(null); // HTTPリクエストの発行
+
+				req.onload = function() {
+					Harmonia.registerSounds(["bgm1", "bgm1", "se1"], [bgmBinaryData, bgmBinaryData, req.response], [269128, 0, 0], [2116816, 0, 0], registerCallback);
+
+				}
+
+				setInterval(function() {
+					var events = Harmonia.getCapturedEvents();
+					if (events != null) {
+						console.log(events);
+					}
+					var errors = Harmonia.getCapturedErrors();
+					if (errors != null) {
+						console.log(errors);
+					}
+				}, 100);
+		    }
+
+		    function registerCallback() {
+		    	console.log("complete");
+		    	bgmGroup = Harmonia.createGroup("bgmGroup");
+		    	seGroup = Harmonia.createGroup("seGroup");
+		    	//Harmonia.play("bgm1", "bgm");
+		    	bgmPlayingData = Harmonia.play("bgm1", "bgm", "bgmGroup");
+		    	bgmGroup.setDucker(seGroup, 0.5);
+
+				setInterval(function() {
+					var currentPosition = bgmPlayingData.getCurrentPosition();
+					document.getElementById("currentPositionOutput").innerHTML = currentPosition;
+					document.getElementById("masterVolumeOutput").innerHTML = Harmonia.getMasterVolume();
+					document.getElementById("bgmGroupVolumeOutput").innerHTML = bgmGroup.getVolume();
+					document.getElementById("seGroupVolumeOutput").innerHTML = seGroup.getVolume();
+					document.getElementById("bgmVolumeOutput").innerHTML = bgmPlayingData.getVolume();
+					
+				}, 100);
+		    }
+
+
+		    function changeVolume(type, volume) {
+		    	if (type == 0) {
+	    			Harmonia.setMasterVolume(volume);
+		    	} else if (type == 1) {
+		    		bgmGroup.setVolume(volume);
+		    	} else if (type == 2) {
+		    		seGroup.setVolume(volume);
+		    	} else if (type == 3) {
+		    		bgmPlayingData.setVolume(volume);
+		    	}
+		    }
+
+		    function mute(type, checked) {
+		    	if (checked) {
+			    	if (type == 0) {
+			    		Harmonia.mute();
+			    	} else if (type == 1) {
+			    		bgmGroup.mute();
+			    	} else if (type == 2) {
+			    		seGroup.mute();
+			    	} else if (type == 3) {
+			    		bgmPlayingData.mute();
+			    	}
+
+		    	} else {
+			    	if (type == 0) {
+			    		Harmonia.unmute();
+			    	} else if (type == 1) {
+			    		bgmGroup.unmute();
+			    	} else if (type == 2) {
+			    		seGroup.unmute();
+			    	} else if (type == 2) {
+			    		bgmPlayingData.unmute();
+			    	}
+		    	}
+
+		    }
+
+		    function pause(type) {
+		    	if (type == 0) {
+		    		Harmonia.pause();
+		    	} else if (type == 1) {
+		    		bgmGroup.pause();
+		    	} else if (type == 2) {
+		    		seGroup.pause();
+		    	} else if (type == 3) {
+		    		bgmPlayingData.pause();
+		    	}
+		    }
+
+		    function resume(type) {
+		    	if (type == 0) {
+		    		Harmonia.resume();
+		    	} else if (type == 1) {
+		    		bgmGroup.resume();
+		    	} else if (type == 2) {
+		    		seGroup.resume();
+		    	} else if (type == 3) {
+		    		bgmPlayingData.resume();
+		    	}
+		    }
+
+		    function stop(type) {
+		    	if (type == 0) {
+		    		Harmonia.stop();
+		    	} else if (type == 1) {
+		    		bgmGroup.stop();
+		    	} else if (type == 2) {
+		    		seGroup.stop();
+		    	} else if (type == 3) {
+		    		bgmPlayingData.stop();
+		    	}
+
+		    	bgmGroup = null;
+		    	seGroup = null;
+		    	bgmPlayingData = null;
+		    }
+
+		    function playSe() {
+		    	Harmonia.play("se1", "", "seGroup");
+		    }
+		    function unregisterBGM() {
+				Harmonia.unregisterSound("bgm1");
+		    }
+		    function deleteGroup() {
+		    	Harmonia.deleteGroup("bgmGroup");
+		    }
+		</script>
+	</head>
+	<body>
+		<div>
+			<p>Master</p>
+			<input type="range" value="1" min="0" max="1" step="0.01" oninput="changeVolume(0, this.value);">
+			<input type="checkbox" value="mute" onclick="mute(0, this.checked);" />mute
+			<input type="button" value="pause" onclick="pause(0);" />
+			<input type="button" value="resume" onclick="resume(0);" />
+			<input type="button" value="stop" onclick="stop(0);" />
+			<span id="masterVolumeOutput"></span>
+			<p>BgmGroup</p>
+			<input type="range" value="1" min="0" max="1" step="0.01" oninput="changeVolume(1, this.value);">
+			<input type="checkbox" value="mute" onclick="mute(1, this.checked);" />mute
+			<input type="button" value="pause" onclick="pause(1);" />
+			<input type="button" value="resume" onclick="resume(1);" />
+			<input type="button" value="stop" onclick="stop(1);" />
+			<span id="bgmGroupVolumeOutput"></span>
+
+			<p>SeGroup</p>
+			<input type="range" value="1" min="0" max="1" step="0.01" oninput="changeVolume(2, this.value);">
+			<input type="checkbox" value="mute" onclick="mute(2, this.checked);" />mute
+			<input type="button" value="pause" onclick="pause(2);" />
+			<input type="button" value="resume" onclick="resume(2);" />
+			<input type="button" value="stop" onclick="stop(2);" />
+			<span id="seGroupVolumeOutput"></span>
+
+			<p>PlayingData</p>
+			<input type="range" value="1" min="0" max="1" step="0.01" oninput="changeVolume(3, this.value);">
+			<input type="checkbox" value="mute" onclick="mute(3, this.checked);" />mute
+			<input type="button" value="pause" onclick="pause(3);" />
+			<input type="button" value="resume" onclick="resume(3);" />
+			<input type="button" value="stop" onclick="stop(3);" />
+			<span id="bgmVolumeOutput"></span>
+		</div>
+		<div>
+			<input type="button" value="Play SE" onclick="playSe();" />
+			<input type="button" value="UnregisterBGM" onclick="unregisterBGM();" />
+			<input type="button" value="DeleteGroup" onclick="deleteGroup();" />
+			<span>currentPoition : </span><span id="currentPositionOutput"></span>
+		</div>
+		<div>
+			<p>BGM : <a href="https://wingless-seraph.net/">https://wingless-seraph.net/</a></p>
+		</div>
+	</body>
+</html>

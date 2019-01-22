@@ -1,0 +1,23 @@
+﻿  vorbisfile.c
+..\..\..\lib\vorbisfile.c(72): warning C4267: '初期化中': 'size_t' から 'long' に変換しました。データが失われているかもしれません。
+..\..\..\lib\vorbisfile.c(259): warning C4244: '関数': 'ogg_int64_t' から 'long' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(273): warning C4244: '=': 'ogg_int64_t' から 'int' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(545): warning C4244: 'return': 'ogg_int64_t' から 'int' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(566): warning C4244: 'return': 'ogg_int64_t' から 'int' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(569): warning C4244: 'return': 'ogg_int64_t' から 'int' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(579): warning C4244: 'return': 'ogg_int64_t' から 'int' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(641): warning C4244: 'return': 'ogg_int64_t' から 'int' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(874): warning C4244: '関数': 'ogg_int64_t' から 'long' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(1012): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(207): note: 'fopen' の宣言を確認してください
+..\..\..\lib\vorbisfile.c(1118): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(1119): warning C4244: 'return': 'double' から 'long' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(1123): warning C4244: 'return': 'double' から 'long' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(1151): warning C4244: '=': 'double' から 'long' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(1764): warning C4244: '=': 'ogg_int64_t' から 'long' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(1801): warning C4244: '初期化中': 'double' から 'ogg_int64_t' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(1831): warning C4244: '初期化中': 'double' から 'ogg_int64_t' への変換です。データが失われる可能性があります。
+..\..\..\lib\vorbisfile.c(2167): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1371,5): warning MSB8012: TargetPath(C:\Users\esaki-kiyokazu\Documents\harmonia\libs\src\libvorbis\win32\VS2010\x64\Release\libvorbisfile.lib) が Library の OutputFile プロパティ値 (C:\Users\esaki-kiyokazu\Documents\harmonia\libs\src\libvorbis\win32\VS2010\x64\Release\libvorbisfile_static.lib) と一致しません。このため、プロジェクトが正常にビルドされない可能性があります。この問題を解決するには、$(OutDir)、$(TargetName)、および $(TargetExt) の各プロパティ値が、%(Lib.OutputFile) で指定されている値と一致することを確認してください。
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1373,5): warning MSB8012: TargetName(libvorbisfile) が Library の OutputFile プロパティ値 (libvorbisfile_static) と一致しません。このため、プロジェクトが正常にビルドされない可能性があります。この問題を解決するには、$(OutDir)、$(TargetName)、および $(TargetExt) の各プロパティ値が、%(Lib.OutputFile) で指定されている値と一致することを確認してください。
+  libvorbisfile_static.vcxproj -> C:\Users\esaki-kiyokazu\Documents\harmonia\libs\src\libvorbis\win32\VS2010\x64\Release\libvorbisfile.lib
